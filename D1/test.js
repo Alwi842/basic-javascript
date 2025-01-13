@@ -287,7 +287,7 @@ function findHighestNumber(arr){
     return(`Nilai tertinggi pada array tersebut adalah ${highest}`)
 }
 
-const nilaiTertinggi=[1,30,26,54,6667,234,96576,23,453];
+const nilaiTertinggi=[1,30,26,54,6567,96576,23,453];
 console.log(findHighestNumber(nilaiTertinggi));
 console.log("\n");
 
