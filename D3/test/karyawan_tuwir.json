@@ -1,0 +1,30 @@
+[
+  {
+    "id": 3,
+    "nama": "Dina",
+    "age": 27,
+    "jobDesk": [
+      {
+        "title": "backend",
+        "salary": 4000000
+      }
+    ],
+    "hobby": [
+      "menulis"
+    ]
+  },
+  {
+    "id": 6,
+    "nama": "Dian",
+    "age": 27,
+    "jobDesk": [
+      {
+        "title": "frontend",
+        "salary": 180000000
+      }
+    ],
+    "hobby": [
+      "membaca"
+    ]
+  }
+]
