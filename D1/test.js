@@ -3,7 +3,6 @@ console.log("======Alwi=====");
 console.log("===============");
 //soal 1
 console.log("=====Soal 1====")
-console.log("===============");
 let a=10;
 let b=7;
 let c=11;
@@ -28,9 +27,7 @@ console.log("\n");
 
 //soal 2:
 //htung berapa detik dalam 30 hari"
-console.log("===============");
 console.log("=====Soal 2====");
-console.log("===============");
 let jam=30*24;
 let menit=jam*60;
 let detik=menit*60;
@@ -38,10 +35,8 @@ console.log(`Dalam 30 hari ada ${jam} jam atau ${menit} Menit atau ${detik} deti
 console.log("\n");
 
 //soal 3 : 
-//Cari hobi.;
-console.log("===============");
+//Cari hobi.
 console.log("=====Soal 3====");
-console.log("===============");
 function findUserHobby(user){
     let hobby=user&&user.hobby || "Tidak ada";
     let hasil=user&&user.nama && (`hobbi dari ${user.nama} adalah ${hobby}` );
@@ -66,9 +61,7 @@ console.log("\n");
 //soal 4 : 
 /*Buat logic switch case untuk menampilkan nama hari pake bahasa inggris berdasarkan input angka 1-7. 
 Jika angka yang dimasukan dari rentang tersebut, maka tampilkan input tidak valid*/
-console.log("===============");
 console.log("=====Soal 4====");
-console.log("===============");
 let hari=1;
 switch (hari) {
     case 1: {
@@ -84,7 +77,7 @@ switch (hari) {
         break;
     }
     case 4: {
-        console.log("Thuesday");
+        console.log("Thursday");
         break;
     }
     case 5: {
@@ -112,9 +105,7 @@ Jika nilai lebih sama dengan 80, anda lulus dengan nilai sangat baik
 Jika nilai lebih dari sama dengan 70, anda lulus
 Jika nilai lebih dari sama dengan 60 dan kurang dari 70 maka lulus
 Jika kurang dari 60 statusnya tidak lulus*/
-console.log("===============");
 console.log("=====Soal 5====");
-console.log("===============");
 let nilai=80;
 if(nilai>=80) console.log("anda lulus dengan nilai sangat baik");
 else if (nilai >= 70) console.log("anda lulus dengan baik");
@@ -128,9 +119,7 @@ Jika nilai yang dimasukan tidak falid, diluar 0-100, makastatusnya 'nilai tidak 
 Jika nilai rata-rata lebih besar atau sama dengan 80, maka statusnya 'selamat anda lulus dengan baik
 Jika nilai rata-rata lebih kecil dari 80 dan lebih besar atau sama dengan 60, 'anda lulus
 Jika kurang dari 60 statusnya tidak lulus");*/
-console.log("===============");
 console.log("=====Soal 6====");
-console.log("===============");
 let fisika=50, kimia= 80, mtk=70;
 let avg=(fisika+kimia+mtk)/3;
 if (avg<=0 || avg>=100) {
@@ -148,10 +137,7 @@ console.log("\n");
 /*buat logic untuk menentukan jenis bilangan (positif negatif atau nol)
 dari nilai input oleh user yang ditentukan menggunakan termetry operator
 Output yang diharapkan ('angka 7 adalah bilangan positif')");*/
-console.log("===============");
 console.log("=====Soal 7====");
-console.log("===============");
-
 let input=10;
 let result= input>0 ? `angka ${input} adalah bilangan positif` : input <0 ? 
     `angka ${input} adalah bilangan negatif` : input===0 ? "angka adalah nol" : "input invalid";
@@ -172,10 +158,7 @@ Tampilkan pesan berikut:
   - Jika dapat diskon, tampilkan 'selamat anda mendapatkan diskon sebesar <diskon>', harga setelah diskon = <hargasetelahdiskon>.
   - Jika tidak dapat diskon, tampilkan 'anda tidak dapat diskon', harga total = <hargasetelahdiskon>.
 */
-
-console.log("===============");
 console.log("=====Soal 8====");
-console.log("===============");
 
 let namaBarang="pisang";
 let hargaBarang=10000;
@@ -211,9 +194,7 @@ console.log("\n");
 /*soal 9 : for loop
 buat program untuk mencari bilangan prima dari 1-25 menggunakan for loop
 */
-console.log("===============");
 console.log("=====Soal 9====");
-console.log("===============");
 
 let max=25;
 for(let i=1;i<=max;i++){
@@ -232,9 +213,7 @@ console.log("\n");
 /* Soal 10 : for loop
 Buat looping untuk menghasilkan nilai rata-rata dari sebuah array bilangan nilai bulat menggunakan function
 */
-console.log("===============");
 console.log("=====Soal 10====");
-console.log("===============");
 function arrAvg(arr){
     let total=0;
     let indexTotal=0;
@@ -252,15 +231,12 @@ console.log("\n");
 soal 11 : for loop
 buat sebuah function untuk menghitung jumlah huruf kapital pada sebuah string
 */
-console.log("===============");
 console.log("=====Soal 11====");
-console.log("===============");
 
 function checkStrUppercase(str){
     let total=0;
     for(let i=0;i<str.length;i++){
-        let character=str[i];
-        if (character===character.toUpperCase()) total++;
+        if (str[i]>="A" && str[i]<="Z") total++;
     }
     return total;
 }
@@ -275,9 +251,7 @@ console.log("\n");
 soal 12 : for loop
 buat fungsi untuk mencari nilai tertinggi dari sebuah array
 */
-console.log("===============");
 console.log("=====Soal 12====");
-console.log("===============");
 
 function findHighestNumber(arr){
     let highest=0;
@@ -296,9 +270,7 @@ soal 13 : for
 buat fungsi untuk membuat segitiga sama kaki yang terbuat dari bintang "*" dengan jumlah baris yang bisa
 ditentukan oleh user melalu parameter fungsi
 */
-console.log("===============");
 console.log("=====Soal 13====");
-console.log("===============");
 function segitigaSamaKaki(length){
     let result="";
     for (let i = 1; i <= length; i++) {
