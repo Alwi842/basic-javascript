@@ -400,7 +400,6 @@ console.log(segitigaSamaKaki(5));
  * Buat CRUD(Create, Read, Update, Delete) data dari data employee yang sebelumnya dipelajarin
  * HANYA GUNAKAN ARRAY METHOD!
  */
-//create
 const employee = [
   {
     id: 1,
@@ -445,6 +444,18 @@ const employee = [
     hobby: ["membaca"],
   },
 ];
+//create
+function createEmployee(data) {
+  employee.push(data);
+  console.log(employee);
+}
+createEmployee({
+  id: 99,
+  nama: "nanung",
+  age: 27,
+  jobDesk: [{ title: "frontend", salary: 180000000 }],
+  hobby: ["membaca"],
+});
 //read
 function readEmployee(index) {
   for (let i = 0; i < employee.length; i++) {
