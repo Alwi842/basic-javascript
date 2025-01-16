@@ -26,5 +26,16 @@
     "hobby": [
       "membaca"
     ]
+  },
+  {
+    "id": 7,
+    "nama": "bambang",
+    "age": 30,
+    "jobDesk": [
+      {
+        "title": "backend",
+        "salary": 5000000
+      }
+    ]
   }
 ]

@@ -21,7 +21,7 @@ console.log("nama Employee : ", namaEmployee);
  * pake readfile & replace pake writefile
  */
 function addEmployee(original, newEmployee) {
-  let extra = [...original, newEmployee];
+  let extra = original.push(newEmployee);
   return extra;
 }
 let newEmployee = {
