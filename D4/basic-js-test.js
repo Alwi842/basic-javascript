@@ -1,4 +1,3 @@
-const { log } = require("console");
 const fs = require("fs");
 
 const carProducts = [
@@ -328,18 +327,6 @@ let newCar = {
       type: "engine",
       fuelType: "pertamax turbo",
     },
-    {
-      color: "white",
-      transmission: "automatic",
-      type: "engine",
-      fuelType: "pertamax turbo",
-    },
-    {
-      color: "red",
-      transmission: "automatic",
-      type: "engine",
-      fuelType: "pertamax turbo",
-    },
   ],
   isPreorder: false,
 };
@@ -470,6 +457,7 @@ function readEmployee(index) {
       console.log("Membaca employee ke", i + 1, " : ", employee[i]);
     } else if (index - 1 === i) {
       console.log("Membaca employee ke", index, " : ", employee[i]);
+      break;
     }
   }
 }

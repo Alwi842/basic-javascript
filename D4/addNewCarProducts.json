@@ -148,6 +148,29 @@
     "isPreorder": false
   },
   {
+    "id": 1,
+    "name": "ESEMKA SUV 4x4 Hybrid",
+    "price": null,
+    "tag": [
+      "Produk Terlaris"
+    ],
+    "variant": [
+      {
+        "color": "black",
+        "transmission": "automatic",
+        "type": "hybrid",
+        "fuelType": "pertalite"
+      },
+      {
+        "color": "silver",
+        "transmission": "manual",
+        "type": "hybrid",
+        "fuelType": "pertalite"
+      }
+    ],
+    "isPreorder": true
+  },
+  {
     "id": 6,
     "name": "Wuling YangWang U9 EV",
     "price": null,
@@ -177,29 +200,6 @@
     "isPreorder": true
   },
   {
-    "id": 1,
-    "name": "ESEMKA SUV 4x4 Hybrid",
-    "price": null,
-    "tag": [
-      "Produk Terlaris"
-    ],
-    "variant": [
-      {
-        "color": "black",
-        "transmission": "automatic",
-        "type": "hybrid",
-        "fuelType": "pertalite"
-      },
-      {
-        "color": "silver",
-        "transmission": "manual",
-        "type": "hybrid",
-        "fuelType": "pertalite"
-      }
-    ],
-    "isPreorder": true
-  },
-  {
     "id": 8,
     "name": "NewCar",
     "price": 7500000,
@@ -216,18 +216,6 @@
       },
       {
         "color": "navy",
-        "transmission": "automatic",
-        "type": "engine",
-        "fuelType": "pertamax turbo"
-      },
-      {
-        "color": "white",
-        "transmission": "automatic",
-        "type": "engine",
-        "fuelType": "pertamax turbo"
-      },
-      {
-        "color": "red",
         "transmission": "automatic",
         "type": "engine",
         "fuelType": "pertamax turbo"
