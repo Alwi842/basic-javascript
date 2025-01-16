@@ -193,29 +193,36 @@ const carProducts = [
  * reduce/math
  */
 console.log("=====Soal 1====");
-let maxPrice = carProducts.reduce((sorted, nextData) => {
-  let price = Math.max(sorted.price, nextData.price);
-  return price === sorted.price ? sorted : nextData;
-}, []);
-let minPrice = carProducts.reduce((sorted, nextData) => {
-  let price = Math.min(sorted.price, nextData.price);
-  return price === sorted.price ? sorted : nextData;
-}, []);
-console.log("Data mobil termahal : ", maxPrice);
-console.log("Data mobil termurah : ", minPrice);
+function getHighestCarPrice() {
+  return carProducts.reduce((sorted, nextData) => {
+    let price = Math.max(sorted.price, nextData.price);
+    return price === sorted.price ? sorted : nextData;
+  }, []);
+}
+function getLowestCarPrice() {
+  return carProducts.reduce((sorted, nextData) => {
+    let price = Math.min(sorted.price, nextData.price);
+    return price === sorted.price ? sorted : nextData;
+  }, []);
+}
+console.log("Data mobil termahal : ", getHighestCarPrice());
+console.log("Data mobil termurah : ", getLowestCarPrice());
 
 console.log("\n=====Soal 2====");
 /** 2
  * filter dan tampilkan data mobil dengan tag "Promo"
  */
-let carPromo = carProducts.filter((data) => {
-  return data.tag.includes("Promo");
-});
-console.log(carPromo);
+function getCarPromo() {
+  return carProducts.filter((data) => {
+    return data.tag.includes("Promo");
+  });
+}
+console.log(getCarPromo());
 
 console.log("\n=====Soal 3====");
 /** 3
- * Urutkan dan tampilkan mobil dari harga tertinggi ke rendah, jika ada harga yang null, tampilkan diurutan terakhir
+ * Urutkan dan tampilkan mobil dari harga tertinggi ke rendah, jika ada harga yang null,
+ * tampilkan diurutan terakhir
  */
 function sortCarsAsc(cars) {
   return cars.reduce((sorted, el) => {
@@ -231,7 +238,8 @@ console.log(sortCarProducts);
 
 console.log("\n=====Soal 4====");
 /** 4
- * Kelompokkan mobil-mobil berdasarkan tipe (engine, hybrid, electric) dan tampilkan data mobil berdasarkan kelompoknya
+ * Kelompokkan mobil-mobil berdasarkan tipe (engine, hybrid, electric) dan tampilkan data mobil
+ * berdasarkan kelompoknya.
  * output : engine: [{dataMobil}], hybrid: [{dataMobil}], electric: [{dataMObil}]
  */
 function typeEngineFilter(cars) {
@@ -263,7 +271,7 @@ fs.readFile("carProducts.json", "utf-8", (err, data) => {
     return err;
   }
   let dataRaw = JSON.parse(data);
-  //menggunakan fungsi yang sama pada no 3
+  //menggunakan fungsi yang sama pada no 3(sortCarsAsc)
   fs.writeFile(
     "./carProducts.json",
     JSON.stringify(sortCarsAsc(dataRaw), null, 2),
@@ -280,7 +288,8 @@ fs.readFile("carProducts.json", "utf-8", (err, data) => {
 
 console.log("\n=====Soal 6====");
 /** 6
- * Buat fungsi untuk menambahkan data mobil baru dari carProducts.json kedalam file "addNewCarProducts.json"
+ * Buat fungsi untuk menambahkan data mobil baru dari carProducts.json kedalam file
+ * "addNewCarProducts.json"
  */
 function addCar(newCar) {
   let carsRaw = fs.readFileSync("./carProducts.json", "utf-8");
@@ -363,11 +372,9 @@ console.log("\n=====Soal 8====");
  * buat fungsi yang mencari mobil dengan varian warna terbanyak.
  */
 function cariMobilWarnaBanyak(cars) {
-  return cars.filter(
-    (car) =>
-      car.variant.length ===
-      Math.max(...cars.map((data) => data.variant.length))
-  );
+  //get car with most color
+  let totalMax = Math.max(...cars.map((data) => data.variant.length));
+  return cars.filter((car) => car.variant.length === totalMax);
 }
 console.log(cariMobilWarnaBanyak(carProducts));
 console.log("\n=====Soal 9====");
@@ -460,7 +467,7 @@ createEmployee({
 function readEmployee(index) {
   for (let i = 0; i < employee.length; i++) {
     if (index === "all") {
-      console.log(data);
+      console.log("Membaca employee ke", i + 1, " : ", employee[i]);
     } else if (index - 1 === i) {
       console.log("Membaca employee ke", index, " : ", employee[i]);
     }
